@@ -62,7 +62,6 @@ LLM integration, evaluation metrics, fine‑tuning attempts, and visualizations.
 - **Hugging Face Hub**
 
 ---
-
 ## 📦 Repository Structure
 
 <details>
@@ -70,25 +69,26 @@ LLM integration, evaluation metrics, fine‑tuning attempts, and visualizations.
 
 | File | Description | Link |
 |------|-------------|------|
-| rag_evaluation_summary.csv | Evaluation summary | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_evaluation_summary.csv |
-| rag_final_summary.csv | Final summary metrics | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_final_summary.csv |
-| rag_optimized_results.csv | Optimized RAG results | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_optimized_results.csv |
-| rag_optimized_results_summary.csv | Optimized summary | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_optimized_results_summary.csv |
-| rag_refined_results.csv | Refined evaluation | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_refined_results.csv |
-| rag_refined_results_summary.csv | Refined evaluation summary | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_refined_results_summary.csv |
-| rag_results_summary.csv | Consolidated summary | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_results_summary.csv |
-| rag_test_results.csv | Test-time results | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_test_results.csv |
-| sft_dataset.jsonl | Raw SFT dataset | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/sft_dataset.jsonl |
-| sft_dataset_clean.jsonl | Cleaned SFT dataset | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/sft_dataset_clean.jsonl |
+| rag_evaluation_summary.csv | Evaluation summary | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_evaluation_summary.csv) |
+| rag_final_summary.csv | Final summary metrics | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_final_summary.csv) |
+| rag_optimized_results.csv | Optimized RAG results | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_optimized_results.csv) |
+| rag_optimized_results_summary.csv | Optimized summary | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_optimized_results_summary.csv) |
+| rag_refined_results.csv | Refined evaluation | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_refined_results.csv) |
+| rag_refined_results_summary.csv | Refined evaluation summary | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_refined_results_summary.csv) |
+| rag_results_summary.csv | Consolidated summary | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_results_summary.csv) |
+| rag_test_results.csv | Test-time results | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/rag_test_results.csv) |
+| sft_dataset.jsonl | Raw SFT dataset | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/sft_dataset.jsonl) |
+| sft_dataset_clean.jsonl | Cleaned SFT dataset | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/data/sft_dataset_clean.jsonl) |
 
 </details>
+
 
 <details>
 <summary><strong>📁 embeddings/ — Document embeddings</strong></summary>
 
 | File | Description | Link |
 |------|-------------|------|
-| doc_embeddings.npy | Numpy document embeddings | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/embeddings/embeddings/doc_embeddings.npy |
+| doc_embeddings.npy | Numpy document embeddings | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/embeddings/embeddings/doc_embeddings.npy) |
 
 </details>
 
@@ -98,8 +98,8 @@ LLM integration, evaluation metrics, fine‑tuning attempts, and visualizations.
 
 | File | Description | Link |
 |------|-------------|------|
-| wiki.index | FAISS index file | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/faiss_index/faiss_index/wiki.index |
-| wiki_chunks.csv | Chunk metadata | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/faiss_index/faiss_index/wiki_chunks.csv |
+| wiki.index | FAISS index file | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/faiss_index/faiss_index/wiki.index) |
+| wiki_chunks.csv | Chunk metadata | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/faiss_index/faiss_index/wiki_chunks.csv) |
 
 </details>
 
@@ -109,9 +109,9 @@ LLM integration, evaluation metrics, fine‑tuning attempts, and visualizations.
 
 | Visualization | Link |
 |--------------|------|
-| Chunk Length Distribution | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/chunk_length_distribution.png |
-| Embedding Similarity Heatmap | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/embedding_similarity_heatmap.png |
-| Simulated Training Loss | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/simulated_training_loss.png |
+| Chunk Length Distribution | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/chunk_length_distribution.png) |
+| Embedding Similarity Heatmap | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/embedding_similarity_heatmap.png) |
+| Simulated Training Loss | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/simulated_training_loss.png) |
 
 </details>
 
@@ -121,8 +121,8 @@ LLM integration, evaluation metrics, fine‑tuning attempts, and visualizations.
 
 | File | Description | Link |
 |------|-------------|------|
-| rag_evaluation_results.csv | Evaluation results table | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/results_table/rag_evaluation_results.csv |
-| rag_final_evaluation_summary.csv | Final comparison summary | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/results_table/rag_final_evaluation_summary.csv |
+| rag_evaluation_results.csv | Evaluation results table | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/results_table/rag_evaluation_results.csv) |
+| rag_final_evaluation_summary.csv | Final comparison summary | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/results_table/rag_final_evaluation_summary.csv) |
 
 </details>
 
@@ -132,14 +132,15 @@ LLM integration, evaluation metrics, fine‑tuning attempts, and visualizations.
 
 | Script | Description | Link |
 |--------|-------------|------|
-| chunking.py | Chunk generation pipeline | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/src/chunking.py |
-| embeddings_faiss.py | Embedding + FAISS utilities | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/src/embeddings_faiss.py |
-| evaluation.py | Evaluation engine | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/src/evaluation.py |
-| preprocessing.py | Text preprocessing logic | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/src/preprocessing.py |
-| rag_engine.py | Core RAG engine implementation | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/src/rag_engine.py |
-| visualization.py | Plotting utilities | https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/src/visualization.py |
+| chunking.py | Chunk generation pipeline | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/src/chunking.py) |
+| embeddings_faiss.py | Embedding + FAISS utilities | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/src/embeddings_faiss.py) |
+| evaluation.py | Evaluation engine | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/src/evaluation.py) |
+| preprocessing.py | Text preprocessing logic | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/src/preprocessing.py) |
+| rag_engine.py | Core RAG engine implementation | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/src/rag_engine.py) |
+| visualization.py | Plotting utilities | [Click Here](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/src/visualization.py) |
 
 </details>
+
 
 
 ---
