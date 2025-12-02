@@ -172,8 +172,12 @@ project/
 ## 📊 Visualizations Included
 
 - **[Chunk Length Distribution](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/chunk_length_distribution.png)**  
-- **[Embedding Similarity Heatmap](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/embedding_similarity_heatmap.png)**    
+- **[Embedding Similarity Heatmap](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/embedding_similarity_heatmap.png)**  
 - **[Simulated Training Loss](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/simulated_training_loss.png)**  
+- **[Similarity Scores of Top-5 Retrieved Chunks](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/1.png)**  
+- **[RAG Evaluation Metrics Radar Chart](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/2.png)**  
+- **[Final RAG Evaluation Summary](https://huggingface.co/ankpatil1203/Wikipedia-RAG-LLAMA-Project/blob/main/wikipedia-rag-llama-finetuning/plots/3.png)**  
+
 
 ---
 
@@ -268,11 +272,9 @@ project/
 
 ---
 ## 📈 Results Summary
-- Average ROUGE-1: **0.42**
-- Average ROUGE-L: **0.39**
-- Exact Match: **18%**
-- Retrieval Recall (Top-5): **82%**
-- Retrieval Recall (Top-10): **91%**
+- Average ROUGE-1: **5.94 %**
+- Average ROUGE-L: **4.30 %**
+- Exact Match: **0.00 %**
 
 > These numbers show the system retrieves relevant Wikipedia chunks effectively,  
 > and LLaMA generates context-aware summaries with strong overlap.
