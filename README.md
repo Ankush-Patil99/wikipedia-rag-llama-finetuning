@@ -1,3 +1,8 @@
+![Status](https://img.shields.io/badge/Project-RAG%20Pipeline-blue)
+![Model](https://img.shields.io/badge/Model-LLaMA-brightgreen)
+![Embeddings](https://img.shields.io/badge/Embeddings-MiniLM-orange)
+![Index](https://img.shields.io/badge/FAISS-IndexFlatIP-purple)
+
 # 📚 Wikipedia RAG + LLaMA Project  
 A complete end-to-end Retrieval-Augmented Generation (RAG) system built using:  
 - FAISS vector search  
@@ -51,41 +56,116 @@ retrieval logic, LLaMA integration, evaluation metrics, and exploratory visualiz
 - Visualizations: radar charts, bar charts, heatmaps  
 
 ---
-flowchart LR
+<details>
+<summary><strong>▶️ HOW TO RUN THE WIKIPEDIA RAG + LLAMA PROJECT</strong></summary>
 
-  %% -------------------- DATA PIPELINE --------------------
-  A[📥 Raw Wikipedia JSONL] --> B[🧹 Preprocessing]
-  B --> C[✂️ Chunking (400 chars, 80 overlap)]
-  C --> D[📄 Chunked Dataset (CSV)]
+# HOW TO RUN THE WIKIPEDIA RAG + LLAMA PROJECT
 
-  %% -------------------- EMBEDDINGS + INDEX --------------------
-  D --> E[🧠 Embedding Model (MiniLM-L6-v2)]
-  E --> F[🔢 Document Embeddings (.npy)]
-  F --> G[🔎 Build FAISS Index (IndexFlatIP)]
-  G --> H[💾 Save Index (wiki.index)]
+This guide provides **clean, professional, step-by-step instructions** for running the full RAG pipeline.
 
-  %% -------------------- RETRIEVAL + PROMPTING --------------------
-  I[🧑‍💻 User Query] --> J[🔁 Query Embedding]
-  J --> K[🔍 FAISS Top-K Search]
-  K --> L[📚 Retrieved Chunks]
-  L --> M[📝 Build RAG Prompt]
+---
 
-  %% -------------------- GENERATION --------------------
-  M --> N[🦙 LLaMA Response Generation]
-  N --> O[🗣️ Final Answer]
+## 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Ankush-Patil99/Wikipedia-RAG-LLAMA-Project
+cd Wikipedia-RAG-LLAMA-Project
+```
 
-  %% -------------------- OPTIONAL FINE-TUNING --------------------
-  F --> P[🛠 Prepare SFT Dataset]
-  P --> Q[🔧 LoRA / QLoRA Fine-Tuning]
-  Q --> N
+---
 
-  %% -------------------- EVALUATION --------------------
-  O --> R[📏 Evaluation (ROUGE, EM)]
-  R --> S[📊 Visualizations]
+## 2️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-  %% -------------------- EXPORT --------------------
-  S --> T[🌐 Upload to HuggingFace]
-  S --> U[💻 Push to GitHub]
+Make sure you have:
+- Python 3.10+
+- CUDA-enabled PyTorch (if using GPU)
+
+---
+
+## 3️⃣ Download Required Artifacts (If Needed)
+
+Place the following inside the respective folders:
+
+```
+/embeddings/embeddings/doc_embeddings.npy
+/faiss_index/faiss_index/wiki.index
+/faiss_index/faiss_index/wiki_chunks.csv
+```
+
+Artifacts are available on your HuggingFace repository.
+
+---
+
+## 4️⃣ Run the RAG Pipeline
+```bash
+python src/rag_engine.py
+```
+
+This will:
+- Load MiniLM embeddings  
+- Load FAISS index  
+- Load chunks  
+- Initialize RAG engine with LLaMA  
+- Accept user queries  
+
+---
+
+## 5️⃣ Use RAG Pipeline Programmatically
+```python
+from src.rag_engine import RAGPipeline
+
+rag = RAGPipeline()
+response = rag.query("What is quantum entanglement?")
+print(response)
+```
+
+---
+
+## 6️⃣ Run Evaluation
+```bash
+python src/evaluation.py
+```
+
+Generates:
+- ROUGE scores  
+- Exact Match  
+- Summary CSVs  
+- Radar chart data  
+
+---
+
+## 7️⃣ Run Visualization
+```bash
+python src/visualization.py
+```
+
+Outputs:
+- Chunk length distribution
+- Embedding similarity heatmap
+- Evaluation charts
+
+---
+
+## 8️⃣ Expected Folder Structure
+```
+project/
+│── data/
+│── embeddings/
+│── faiss_index/
+│── plots/
+│── results_table/
+│── src/
+│── requirements.txt
+│── README.md
+```
+
+---
+
+💡 All steps are fully reproducible.
+
+</details>
 
 ---
 
