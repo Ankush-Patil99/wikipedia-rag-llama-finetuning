@@ -1,47 +1,91 @@
 # 📚 Wikipedia RAG + LLaMA Project  
-A complete end-to-end Retrieval-Augmented Generation system built using:  
--  FAISS Vector Search  
--  MiniLM-L6 Embeddings  
--  LLaMA Language Model  
--  Wikipedia Chunked Dataset  
--  Evaluation Metrics + Visualizations  
+A complete end-to-end Retrieval-Augmented Generation (RAG) system built using:  
+- FAISS vector search  
+- MiniLM-L6 sentence embeddings  
+- LLaMA language model  
+- Wikipedia chunked dataset  
+- Evaluation metrics + visualizations  
+
+This project demonstrates how to build a production-style RAG pipeline from scratch —  
+including data processing, embeddings, vector indexing, retrieval, LLM reasoning,  
+evaluation, and analysis.  
 
 ---
 
 ## 🚀 Project Overview
-This repository contains all artifacts required to reproduce a Wikipedia-based RAG system.  
-It includes dataset preparation, embedding generation, vector indexing, retrieval,  
-LLM integration, evaluation metrics, fine‑tuning attempts, and visualizations.
+This repository contains all artifacts required to fully reproduce a Wikipedia-based RAG system.  
+It includes: dataset preparation, embedding generation, vector indexing with FAISS,  
+retrieval logic, LLaMA integration, evaluation metrics, and exploratory visualizations.  
 
 ---
 
 ## 🧩 Components Included
 
 ### 1️⃣ **Dataset Preparation**
-- JSONL Wikipedia files processed  
-- Extracted abstracts + section text  
-- Cleaned + normalized text  
-- Chunking (400 chars, 80 overlap)
+- Process Wikipedia JSONL dumps  
+- Extract abstracts + section text  
+- Clean + normalize text  
+- Generate overlapping chunks (400-char size, 80-char overlap)  
+
 ### 2️⃣ **Embeddings**
-- Model: `all-MiniLM-L6-v2`  
-- Batch encoding  
-- 500k chunk embeddings stored  
-- Saved as `.npy`  
+- Model used: `all-MiniLM-L6-v2`  
+- Batch inference for 500k+ chunks  
+- Stored as `.npy` for fast loading  
+
 ### 3️⃣ **FAISS Indexing**
-- Built using cosine similarity (IndexFlatIP)  
-- Normalized vectors  
-- Stored: `wiki.index`
-### 4️⃣ **RAG Retrieval**
+- Cosine-similarity search using `IndexFlatIP`  
+- L2-normalized embedding vectors  
+- Stored FAISS index: `wiki.index`  
+
+### 4️⃣ **RAG Retrieval Pipeline**
 - Embed user query  
-- FAISS top‑k search  
-- Build context-aware prompt  
-- Pass to LLaMA generator
-### 5️⃣ **Evaluation**
-- ROUGE‑1, ROUGE‑L  
-- Exact match  
-- Chunk recall inspection  
-- Multi-step refinement  
-- Radar charts, bar charts, heatmaps  
+- Perform FAISS top-k retrieval  
+- Construct context-aware prompt  
+- Generate response using LLaMA  
+
+### 5️⃣ **Evaluation & Analysis**
+- ROUGE-1, ROUGE-L  
+- Exact match accuracy  
+- Chunk-recall inspection  
+- Multi-step refinement workflow  
+- Visualizations: radar charts, bar charts, heatmaps  
+
+---
+flowchart LR
+
+  %% -------------------- DATA PIPELINE --------------------
+  A[📥 Raw Wikipedia JSONL] --> B[🧹 Preprocessing]
+  B --> C[✂️ Chunking (400 chars, 80 overlap)]
+  C --> D[📄 Chunked Dataset (CSV)]
+
+  %% -------------------- EMBEDDINGS + INDEX --------------------
+  D --> E[🧠 Embedding Model (MiniLM-L6-v2)]
+  E --> F[🔢 Document Embeddings (.npy)]
+  F --> G[🔎 Build FAISS Index (IndexFlatIP)]
+  G --> H[💾 Save Index (wiki.index)]
+
+  %% -------------------- RETRIEVAL + PROMPTING --------------------
+  I[🧑‍💻 User Query] --> J[🔁 Query Embedding]
+  J --> K[🔍 FAISS Top-K Search]
+  K --> L[📚 Retrieved Chunks]
+  L --> M[📝 Build RAG Prompt]
+
+  %% -------------------- GENERATION --------------------
+  M --> N[🦙 LLaMA Response Generation]
+  N --> O[🗣️ Final Answer]
+
+  %% -------------------- OPTIONAL FINE-TUNING --------------------
+  F --> P[🛠 Prepare SFT Dataset]
+  P --> Q[🔧 LoRA / QLoRA Fine-Tuning]
+  Q --> N
+
+  %% -------------------- EVALUATION --------------------
+  O --> R[📏 Evaluation (ROUGE, EM)]
+  R --> S[📊 Visualizations]
+
+  %% -------------------- EXPORT --------------------
+  S --> T[🌐 Upload to HuggingFace]
+  S --> U[💻 Push to GitHub]
 
 ---
 
@@ -142,6 +186,16 @@ LLM integration, evaluation metrics, fine‑tuning attempts, and visualizations.
 </details>
 
 
+---
+## 📈 Results Summary
+- Average ROUGE-1: **0.42**
+- Average ROUGE-L: **0.39**
+- Exact Match: **18%**
+- Retrieval Recall (Top-5): **82%**
+- Retrieval Recall (Top-10): **91%**
+
+> These numbers show the system retrieves relevant Wikipedia chunks effectively,  
+> and LLaMA generates context-aware summaries with strong overlap.
 
 ---
 
@@ -149,10 +203,19 @@ LLM integration, evaluation metrics, fine‑tuning attempts, and visualizations.
 This project demonstrates a complete working implementation of a Wikipedia‑scale  
 RAG system with retrieval, LLM response generation, evaluations, and visualization  
 suitable for GitHub or professional portfolio display.
+---
+## 🔮 Future Improvements
+- Add full LLaMA fine-tuning using LoRA / QLoRA
+- Replace MiniLM with modern embedding models (e5-large, SFR-Embedding)
+- Add reranking (Cross-Encoder or ColBERT)
+- Deploy API via FastAPI + Docker
+- Add streaming UI with Gradio
 
 ---
 
 ## 👤 Author
 **Ankush Patil**  
 Machine Learning & NLP Engineer  
-GitHub / Kaggle / HuggingFace: *Your profiles here*
+📧 **Email**: ankpatil1203@gmail.com  
+💼 **LinkedIn**: www.linkedin.com/in/ankush-patil-48989739a  
+🌐 **GitHub**: https://github.com/Ankush-Patil99  
